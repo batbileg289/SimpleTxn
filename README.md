@@ -16,7 +16,9 @@ java -jar target/batbileg-0.1.jar
 * HTTP GET - Show account information. URL: ([http://localhost:8080/txn](http://localhost:8080/txn))
 * HTTP POST - Transaction. URL: ([http://localhost:8080/txn](http://localhost:8080/txn))
 
-Request body:
+Content-Type: application/json
+
+Example request body:
 ```JSON
 {
     "from": "a1",
@@ -26,5 +28,5 @@ Request body:
 ```
 
 ## Test tool
-* You can use Postman ([https://www.getpostman.com/downloads/](https://www.getpostman.com/downloads/))
+* You can use [Postman](https://www.getpostman.com/downloads/) or any
 
