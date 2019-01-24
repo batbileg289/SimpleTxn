@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: batbilegtest
+---
+testFramework: junit
+sourceLanguage: java
