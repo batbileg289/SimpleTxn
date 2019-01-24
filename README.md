@@ -3,8 +3,14 @@
 * Maven
 
 ## Build and Run 
-* Build: mvn clean package
-* Run: java -jar target/batbileg-0.1.jar
+* Build: 
+```
+mvn clean package
+```
+* Run: 
+```
+java -jar target/batbileg-0.1.jar
+```
 
 ## Test 
 * HTTP GET - Show account information. URL: ([http://localhost:8080/txn](http://localhost:8080/txn))
