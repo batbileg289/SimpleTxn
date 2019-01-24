@@ -12,7 +12,15 @@ public class Account {
 	@Id
 	@GeneratedValue
 	private Long id;
+	
+	/**
+	 * Account number
+	 */
 	private String acntNum;
+	
+	/**
+	 * Account name
+	 */
 	private String acntName;
 	private BigDecimal balance = new BigDecimal("0.0");
 

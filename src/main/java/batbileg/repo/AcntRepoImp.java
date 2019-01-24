@@ -25,6 +25,7 @@ public class AcntRepoImp implements AcntRepo {
 		Account a = null;
 		try {
 			a = q.getSingleResult();
+			a.getAcntName();
 		} catch (NoResultException nre) {
 			// TODO Handle NoResultException and convert to user friendly message
 		}
