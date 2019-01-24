@@ -18,3 +18,7 @@ Request body:
     "amount": 286.43
 }
 ```
+
+## Test tool
+* You can use Postman ([https://www.getpostman.com/downloads/](https://www.getpostman.com/downloads/))
+
