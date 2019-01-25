@@ -5,8 +5,10 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import batbileg.repo.AcntRepo;
+import io.micronaut.context.annotation.Parallel;
 
 @Singleton
+@Parallel
 public class InitData {
 
 	@Inject

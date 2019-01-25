@@ -10,7 +10,6 @@ import batbileg.TxnResponse;
 import batbileg.domain.Account;
 import batbileg.service.AcntService;
 import batbileg.service.TxnService;
-import batbileg.service.InitData;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
@@ -26,8 +25,6 @@ public class TxnController {
 	TxnService txn;
 	@Inject
 	AcntService acnt;
-	@Inject
-	InitData init;
 
 	@Get("/acnt")
 	public List<Account> getList() {
