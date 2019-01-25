@@ -9,6 +9,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import batbileg.domain.Account;
+import io.micronaut.spring.tx.annotation.Transactional;
 
 public class AcntRepoImp implements AcntRepo {
 
@@ -25,23 +26,17 @@ public class AcntRepoImp implements AcntRepo {
 		Account a = null;
 		try {
 			a = q.getSingleResult();
-			a.getAcntName();
 		} catch (NoResultException nre) {
 			// TODO Handle NoResultException and convert to user friendly message
 		}
 		return a;
 	}
 
-	// Temporary! for initial data!
+	@Transactional
 	public void initData() {
-		if (init)
-			return;
-		init = true;
 		Account a1 = new Account("a1", "Batbileg", new BigDecimal("1000"));
 		Account a2 = new Account("a2", "David", new BigDecimal("1000"));
 		em.persist(a1);
 		em.persist(a2);
 	}
-	private static boolean init = false;
-
 }

@@ -3,6 +3,8 @@ package batbileg.service;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import batbileg.domain.Account;
 import batbileg.repo.AcntRepo;
@@ -12,13 +14,11 @@ public class AcntServiceImp implements AcntService {
 
 	@Inject
 	AcntRepo repo;
+	@PersistenceContext
+	private EntityManager em;
 
 	@Transactional
 	public List<Account> getAcntList() {
-		// Temporary! for only initial data!
-		repo.initData();
-
 		return repo.findAll();
 	}
-
 }

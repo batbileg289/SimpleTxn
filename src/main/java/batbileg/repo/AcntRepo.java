@@ -9,6 +9,6 @@ public interface AcntRepo {
 	List<Account> findAll();
 
 	Account findByAcntNum(String num);
-	
-	public void initData();
+
+	void initData();
 }

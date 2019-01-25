@@ -19,9 +19,7 @@ public class TxnServiceImp implements TxnService {
 
 	@Transactional
 	public TxnResponse txn(TxnRequest req) {
-		// Temporary! for only initial data!
-		repo.initData();
-
+		
 		// Validate account information
 		if (null == req.getFrom() || null == req.getTo() || req.getFrom().equals(req.getTo()))
 			return new TxnResponse(1, "Bad request!");

@@ -13,8 +13,8 @@ java -jar target/batbileg-0.1.jar
 ```
 
 ## Test 
-* HTTP GET - Show account information. URL: ([http://localhost:8080/txn](http://localhost:8080/txn))
-* HTTP POST - Transaction. URL: ([http://localhost:8080/txn](http://localhost:8080/txn))
+* HTTP GET - Show account information. URL: [http://localhost:8080/acnt](http://localhost:8080/acnt)
+* HTTP POST - Transaction. URL: [http://localhost:8080/txn](http://localhost:8080/txn)
 
 Content-Type: application/json
 

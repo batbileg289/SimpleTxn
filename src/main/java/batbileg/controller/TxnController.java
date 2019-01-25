@@ -10,6 +10,7 @@ import batbileg.TxnResponse;
 import batbileg.domain.Account;
 import batbileg.service.AcntService;
 import batbileg.service.TxnService;
+import batbileg.service.InitData;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
@@ -17,7 +18,7 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.validation.Validated;
 
-@Controller("/txn")
+@Controller
 @Validated
 public class TxnController {
 
@@ -25,14 +26,15 @@ public class TxnController {
 	TxnService txn;
 	@Inject
 	AcntService acnt;
+	@Inject
+	InitData init;
 
-	// for account information
-	@Get
+	@Get("/acnt")
 	public List<Account> getList() {
 		return acnt.getAcntList();
 	}
 
-	@Post
+	@Post("/txn")
 	public HttpResponse<TxnResponse> txn(@Valid @Body TxnRequest req) {
 		TxnResponse res = txn.txn(req);
 		return HttpResponse.ok(res);
