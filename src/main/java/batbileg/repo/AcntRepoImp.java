@@ -22,6 +22,7 @@ public class AcntRepoImp implements AcntRepo {
 
 	public Account findByAcntNum(String num) {
 		TypedQuery<Account> q = em.createQuery("SELECT a FROM Account as a where a.acntNum = :num", Account.class)
+//				.setLockMode(LockModeType.PESSIMISTIC_READ)
 				.setParameter("num", num);
 		Account a = null;
 		try {
