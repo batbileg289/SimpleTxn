@@ -1,15 +1,13 @@
 package batbileg;
 
 public class TxnResponse {
-	private int code = 0;// default value
-	private String description = "Successful";// default value
-	private Object data;
+	private int code = 0;// default value - Success
+	private String description;
+	private Long txnId;
 
-	public TxnResponse() {
-	}
-
-	public TxnResponse(Object data) {
-		this.data = data;
+	public TxnResponse(String desc, Long txnId) {
+		this.description = desc;
+		this.txnId = txnId;
 	}
 
 	public TxnResponse(int code, String desc) {
@@ -33,12 +31,12 @@ public class TxnResponse {
 		this.description = description;
 	}
 
-	public Object getData() {
-		return data;
+	public Long getTxnId() {
+		return txnId;
 	}
 
-	public void setData(Object data) {
-		this.data = data;
+	public void setTxnId(Long txnId) {
+		this.txnId = txnId;
 	}
 
 }

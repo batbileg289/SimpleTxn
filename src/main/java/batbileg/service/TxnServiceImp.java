@@ -40,10 +40,6 @@ public class TxnServiceImp implements TxnService {
 		Txn t = new Txn(from, to, req.getAmount());
 		txnRepo.save(t);
 
-		// Prepare response
-		TxnResponse res = new TxnResponse();
-		res.setDescription("Successful. TxnId:" + t.getId());
-
-		return res;
+		return new TxnResponse("Successful", t.getId());
 	}
 }
